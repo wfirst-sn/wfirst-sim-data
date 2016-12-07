@@ -1,0 +1,22 @@
+# open rest-lambda range beyond nominal 2900-7000 A range.
+# S.Rodney 2012.03.10 : open rest-lambda range even further, 
+#  w/  extrapolations out to 300 to 18000 Angstroms
+# BEWARE: intended for classification only ... not for precision work
+#         such as distances.
+#
+
+RESTLAMBDA_RANGE:  300. 22000.
+COLORLAW_VERSION: 1   # Using SALT2 Color law from Guy et al 2010
+
+COLORLAW_PARAMS: 2800 7000 4 -0.537186 0.894515 -0.513865 0.0891927
+COLOR_OFFSET:  0.0  
+
+MAG_OFFSET: 0.27
+SEDFLUX_INTERP_OPT: 1  # 1=>linear,    2=>spline
+ERRMAP_INTERP_OPT:  1  # 0=snake off;  1=>linear  2=>spline
+ERRMAP_KCOR_OPT:    1  # 1/0 => on/off
+
+MAGERR_FLOOR:   0.005            # don;t allow smaller error than this
+MAGERR_LAMOBS:  0.2   300  2000  # magerr minlam maxlam
+MAGERR_LAMOBS:  0.1  2000  4000  # magerr minlam maxlam
+MAGERR_LAMREST: 0.1   100   200  # magerr minlam maxlam

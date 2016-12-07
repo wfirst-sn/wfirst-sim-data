@@ -1,0 +1,53 @@
+March 10, 2012
+S.Rodney
+
+Same as SALT2.Guy10, but with increased lambda range, 
+extending from UV through IR.
+
+BEWARE:
+intended only for classification ... do NOT use for
+precision applications such as distances.
+
+Jan 27, 2013: installed into SNANA by R.Kessler
+
+===================
+
+The RESTLAMBDA_RANGE file is used only by the SNANA version of SALT2 and was 
+not used in Kessler 09.  The file in this dir was modified from the version 
+in the SALT2.K09_LAMOPEN directory to extend the wavelength range.
+
+
+Below the line is a modification of the README file as provided by J. Guy,
+annotated by S.Rodney
+-------------------------------------------------------
+Data needed by SALT2 model
+-----------------------------------
+
+# SR: modified SALT2.INFO  appropriately.  Note that I had to fall back 
+#  on linear interpolation of the SED flux, using : 
+#       SEDFLUX_INTERP_OPT: 1  # 1=>linear,    2=>spline
+# This may be a worry? 
+SALT2.INFO
+
+# SR: These two are untouched (is that right?)
+salt2_color_correction.dat
+RESTLAMBDA_RANGE.DAT
+
+# SR: extrapolation guided by Hsiao SED template
+salt2_template_0.dat
+
+# SR:  ~flatline extension (from 8500 Ang on red side)
+salt2_template_1.dat
+
+#SR: smooth, ~flat extrapolations (manual)
+salt2_color_dispersion.dat
+
+# SR: The rest are flatline extrapolations (copying the first/last value across) :
+salt2_lc_dispersion_scaling.dat
+salt2_lc_relative_covariance_01.dat
+salt2_lc_relative_variance_0.dat
+salt2_lc_relative_variance_1.dat
+salt2_spec_covariance_01.dat
+salt2_spec_variance_0.dat
+salt2_spec_variance_1.dat
+
